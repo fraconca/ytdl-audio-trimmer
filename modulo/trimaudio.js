@@ -9,7 +9,7 @@ function trimAudio(inputFile, startTime, duration, outputFile = null) {
         outputFile = `${baseName}_trimmed${ext}`; // Exemplo: audio_20250223091432_1234_trimmed.mp3
     }
 
-    console.log(`Cortando áudio: ${inputFile} -> ${outputFile} [${startTime}s até ${duration}s]`);
+    console.log(`Cortando áudio: ${inputFile} -> ${outputFile} que será cortado com ${startTime}s e terá duração total de ${duration}s`);
 
     return new Promise((resolve, reject) => {
         ffmpeg(inputFile)
