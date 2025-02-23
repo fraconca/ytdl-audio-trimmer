@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/fraconca/ytdl-audio-trimmer/issues"
   },
-  "homepage": "https://github.com/fraconca/ytdl-audio-trimmer#readme"
+  "homepage": "https://github.com/fraconca/ytdl-audio-trimmer#readme",
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.4"
+  }
 }
