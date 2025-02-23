@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/fraconca/ytdl-audio-trimmer#readme",
   "dependencies": {
-    "@distube/ytdl-core": "^4.16.4"
+    "@distube/ytdl-core": "^4.16.4",
+    "fluent-ffmpeg": "^2.1.3"
   }
 }

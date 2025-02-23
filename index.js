@@ -1,6 +1,5 @@
 const ytdl = require("@distube/ytdl-core");
 const ffmpeg = require("fluent-ffmpeg");
-// const fs = require("fs");
 const path = require("path");
 
 
@@ -35,5 +34,5 @@ async function downloadMP3(videoUrl, outputFilename) {
 }
 
 // URL do vídeo e nome do arquivo de saída
-const videoUrl = "https://www.youtube.com/watch?v=d6p-nWp2sSg"; // Substitua pelo ID do vídeo
+const videoUrl = "https://www.youtube.com/watch?v=Da4eikl5wfk"; // Substitua pelo ID do vídeo
 downloadMP3(videoUrl, "audio.mp3");
