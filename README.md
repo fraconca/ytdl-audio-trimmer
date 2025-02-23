@@ -58,6 +58,11 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 ---
 
+## O que cada script faz?
+
+1. index.js baixa um arquivo de áudio de uma URL do YouTube e salva com o nome de audio.mp3.
+2. 
+
 ## 📝 Como Usar
 
 ### Baixar Áudio e Cortar

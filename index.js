@@ -2,7 +2,6 @@ const ytdl = require("@distube/ytdl-core");
 const ffmpeg = require("fluent-ffmpeg");
 const path = require("path");
 
-
 // Função para baixar áudio em MP3
 async function downloadMP3(videoUrl, outputFilename) {
     try {
