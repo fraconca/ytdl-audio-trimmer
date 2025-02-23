@@ -1,4 +1,4 @@
-# Youtube Audio MP3 Downloader + Audio Trimmer
+# Youtube MP3 Downloader + Audio Trimmer
 
 #### Requisitos
 Node.JS
