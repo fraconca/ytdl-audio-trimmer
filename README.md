@@ -68,6 +68,10 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 4. index_4_trimmer.js usa a função ffmpeg() e no método .on define um início e fim do corte diretamente em "trimAudio()" contado em segundos.
 
+5. index_5_trimmer.js amplia a função ffmpeg() ao converter os tempos em HH:MM:SS para segundos e cria uma nova função convertToSeconds() para poder editar a entrada no formato HH:MM:SS como é encontrado no formato de registro de tempo dos vídeos do YouTube.
+
+---
+
 ## 📝 Como Usar
 
 ### Baixar Áudio e Cortar
