@@ -1,0 +1,33 @@
+{
+  "name": "ytdl-audio-trimmer",
+  "version": "1.0.0",
+  "description": "YouTube Downloader + Audio Trimmer is a project for educational purpose only. Focused on learning Javascript and Node.js, this project aims to show in a simple way how to automatically download audio from a YouTube URL, convert it to MP3 and cut the audio to a desired track. Use for study purposes only and remember that Copyright is reserved for artists and producers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fraconca/ytdl-audio-trimmer.git"
+  },
+  "keywords": [
+    "youtube",
+    "ytdl",
+    "yt",
+    "downloader",
+    "mp3",
+    "audio",
+    "trimmer",
+    "node",
+    "javascript",
+    "brazil",
+    "qoda",
+    "qodain"
+  ],
+  "author": "Flávio Conca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fraconca/ytdl-audio-trimmer/issues"
+  },
+  "homepage": "https://github.com/fraconca/ytdl-audio-trimmer#readme"
+}
