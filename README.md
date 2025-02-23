@@ -66,6 +66,8 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 3. index_3.js implementa a função generateFilename() para gerar um nome único do arquivo usando Date, timestamp e converte a data como string no formato ISO. Depois Remove caracteres especiais, mantendo apenas ANO, MÊS, DIA, HORA, MINUTO, SEGUNDO e adiciona um número aleatório de 4 dígitos, criando o formato final do arquivo "audio_${timestamp}_${randomNum}.mp3" e salvando na pasta onde o script foi executado.
 
+4. index_4_trimmer.js usa a função ffmpeg() e no método .on define um início e fim do corte diretamente em "trimAudio()" contado em segundos.
+
 ## 📝 Como Usar
 
 ### Baixar Áudio e Cortar
