@@ -1,4 +1,3 @@
-# ytdl-audio-trimmer
 # Youtube Audio MP3 Downloader + Audio Trimmer
 
 #### Requisitos
@@ -17,7 +16,7 @@ npm install
 
 2. Rode o arquivo index.js 
 
-### Disclaimer
+#### Disclaimer
 
 O link do YouTube utilizado possui uma faixa que está em domínio público, logo, não há infrações dos Direitos Autorais e pode ser utilizada para fins educativos.
 
