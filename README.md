@@ -94,6 +94,40 @@ Se você preferir cortar um arquivo MP3 já baixado manualmente, use o arquivo `
 node trimaudio.js <arquivo-audio> <hora-inicio> <hora-fim>
 ```
 
-#### Disclaimer
+---
 
-O link do YouTube utilizado possui uma faixa que está em domínio público, logo, não há infrações dos Direitos Autorais e pode ser utilizada para fins educativos. O arquivo que será baixado pertence ao YouTube Audio Library e é da autoria de W. A. Mozart, Symphony No.38 in D major.
+## 🔧 Contribuições
+
+Contribuições são bem-vindas! Se você encontrou um bug ou tem uma ideia para melhorar o projeto, sinta-se à vontade para abrir uma issue ou pull request.
+
+Para contribuir:
+
+1. Faça um fork deste repositório.
+
+2. Crie uma branch para a sua funcionalidade ou correção de bug:
+
+```bash
+git checkout -b minha-funcionalidade
+```
+
+3. Faça suas alterações e envie-as:
+
+```bash
+git commit -m "Adicionando nova funcionalidade"
+git push origin minha-funcionalidade
+```
+
+4. Abra uma pull request.
+
+---
+
+#### 📜 Disclaimer
+
+Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes. O link do YouTube utilizado possui uma faixa que está em domínio público, logo, não há infrações dos Direitos Autorais e pode ser utilizada para fins educativos. O arquivo que será baixado pertence ao YouTube Audio Library e é da autoria de W. A. Mozart, Symphony No.38 in D major.
+
+---
+
+#### 🎯 Links Úteis
+
+[Site ofiical FFmpeg](https://ffmpeg.org/)
+[Documentação ytdl-core](https://github.com/fent/node-ytdl-core)
