@@ -15,11 +15,11 @@ function generateFilename() {
 // Função para baixar áudio em MP3
 async function downloadMP3(videoUrl) {
     if (!ytdl.validateURL(videoUrl)) {
-        return console.log("URL inválida!");
+        return console.log("🛑 URL inválida!");
     }
 
     const outputFilename = generateFilename();
-    console.log(`Baixando áudio como: ${outputFilename}`);
+    console.log(`🚧 Baixando áudio como: ${outputFilename}`);
 
     const audioStream = ytdl(videoUrl, { quality: "highestaudio" });
 
@@ -29,7 +29,7 @@ async function downloadMP3(videoUrl) {
             .toFormat("mp3")
             .save(outputFilename)
             .on("end", () => {
-                console.log(`Download concluído: ${outputFilename}`);
+                console.log(`✅ Download concluído: ${outputFilename} 🎶`);
                 resolve();
             })
             .on("error", reject);

@@ -6,11 +6,11 @@ const path = require("path");
 async function downloadMP3(videoUrl, outputFilename) {
     try {
         if (!ytdl.validateURL(videoUrl)) {
-            console.log("URL inválida!");
+            console.log("🛑 URL inválida! 🛑");
             return;
         }
 
-        console.log("Baixando áudio...");
+        console.log("🚧 Baixando áudio...");
 
         // Cria stream de entrada
         const audioStream = ytdl(videoUrl, { quality: "highestaudio" });
@@ -25,10 +25,10 @@ async function downloadMP3(videoUrl, outputFilename) {
             .audioBitrate(128) // Qualidade do áudio
             .toFormat("mp3")
             .save(outputPath)
-            .on("end", () => console.log(`Download concluído: ${outputPath}`))
+            .on("end", () => console.log(`✅ Download concluído: ${outputPath} 🎶`))
             .on("error", (err) => console.error("Erro:", err));
     } catch (error) {
-        console.error("Erro ao baixar o áudio:", error);
+        console.error("🛑🛑🛑 Erro ao baixar o áudio:", error);
     }
 }
 
