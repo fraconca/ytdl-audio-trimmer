@@ -78,8 +78,7 @@ Se você preferir cortar um arquivo MP3 já baixado manualmente, use o arquivo `
 
 ```bash
 node trimaudio.js <arquivo-audio> <hora-inicio> <hora-fim>
-
----
+```
 
 #### Disclaimer
 
