@@ -61,7 +61,10 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 ## O que cada script faz?
 
 1. index.js baixa um arquivo de áudio de uma URL do YouTube e salva com o nome de audio.mp3.
+
 2. index_2.js faz a mesma coisa que index.js com menos código. Preferi não efetuar um commit no arquivo anterior para poder ter um comparativo da evolução do código que reduziu de 37 para 27 linhas de código.
+
+3. index_3.js implementa a função generateFilename() para gerar um nome único do arquivo usando Date, timestamp e converte a data como string no formato ISO. Depois Remove caracteres especiais, mantendo apenas ANO, MÊS, DIA, HORA, MINUTO, SEGUNDO e adiciona um número aleatório de 4 dígitos, criando o formato final do arquivo "audio_${timestamp}_${randomNum}.mp3" e salvando na pasta onde o script foi executado.
 
 ## 📝 Como Usar
 
