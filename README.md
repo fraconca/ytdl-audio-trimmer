@@ -61,7 +61,7 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 ## O que cada script faz?
 
 1. index.js baixa um arquivo de áudio de uma URL do YouTube e salva com o nome de audio.mp3.
-2. 
+2. index_2.js faz a mesma coisa que index.js com menos código. Preferi não efetuar um commit no arquivo anterior para poder ter um comparativo da evolução do código que reduziu de 37 para 27 linhas de código.
 
 ## 📝 Como Usar
 
