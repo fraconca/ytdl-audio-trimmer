@@ -82,6 +82,7 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 ## 📝 Como Usar
 
+
 ### Baixar áudio e cortar
 
 Para iniciar o processo de download e corte de áudio, utilize o seguinte comando:
