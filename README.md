@@ -75,8 +75,7 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 ### Baixar áudio e cortar
 
-Para iniciar o processo de download e corte de áudio, utilize o seguinte comando:
-
+- Para iniciar o processo de download e corte de áudio, utilize o seguinte comando:
     ```bash
     node ytdownload --start 00:00:45 --end 00:27:24 --url "https://www.youtube.com/watch?v=3q3U9HpPHmY"
     ```
