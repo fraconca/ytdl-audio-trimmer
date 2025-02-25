@@ -3,8 +3,6 @@
 Este repositório contém um simples **YouTube MP3 Downloader** com uma funcionalidade adicional de **corte (trim)** de áudio, tudo implementado em **Node.js**. Baixe músicas de YouTube e extraia trechos específicos de forma rápida e prática.
 
 
----
-
 
 ## 🚀 Descrição
 
@@ -18,8 +16,6 @@ Este projeto permite baixar áudio de vídeos do YouTube diretamente para MP3 e 
 Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fent/node-ytdl-core) para download de vídeos e [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) para manipulação e corte de áudio.
 
 
----
-
 
 ## O que o script faz?
 
@@ -32,8 +28,6 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 4. No final a execução, você terá dois arquivos: um original completo e outro cortado. 
 
 
----
-
 
 ## 🛠️ Funcionalidades
 
@@ -42,8 +36,6 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 - **Conversão de tempos (HH:MM:SS)** para segundos de forma automática.
 - **Nomeação dinâmica** do arquivo de áudio com base na data e um número aleatório.
 
-
----
 
 
 ## 📥 Instalação
@@ -77,8 +69,6 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 > Caso não tenha o FFmpeg instalado, siga as instruções no link acima.
 
 
----
-
 
 ## 📝 Como Usar
 
@@ -109,8 +99,6 @@ A única exigência obrigatória é a --url. Se o argumento não for passado, o 
 - Se ``--start`` e ``--end`` não forem passados, o áudio será baixado normalmente sem cortes.
 
 
----
-
 
 ## 🔧 Contribuições
 
@@ -126,15 +114,11 @@ https://br.linkedin.com/in/flavio-conca
 **Me siga no Twitter** também: [@fraconca](https://x.com/FraConca)
 
 
----
-
 
 #### 📜 Disclaimer
 
 Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes. O link do YouTube utilizado possui uma faixa que está em domínio público, logo, não há infrações dos Direitos Autorais e pode ser utilizada para fins educativos. O arquivo que será baixado pertence ao YouTube Audio Library e é da autoria de W. A. Mozart, Symphony No.38 in D major.
 
-
----
 
 
 #### 🎯 Links Úteis
