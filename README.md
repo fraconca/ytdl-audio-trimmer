@@ -21,7 +21,7 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 ---
 
 
-## O que cada script faz?
+## O que o script faz?
 
 1. Baixa um arquivo completo de áudio de uma URL do YouTube.
 
