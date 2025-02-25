@@ -86,7 +86,7 @@ O script precisa receber argumentos corretos através de 3 flags para poder real
 
 - --end define o tempo final do corte no mesmo formato HH:MM:SS.
 
-- --URL define a URL do vídeo do YouTube a ser baixado.
+- --url define a URL do vídeo do YouTube a ser baixado. Detalhe: URL na flag é em minúsculo (url), ok?!
 
 > IMPORTANTE: Certifique-se de colocar a URL entre aspas (" ") para evitar erros no terminal. 
 
