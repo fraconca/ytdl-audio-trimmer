@@ -49,7 +49,7 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 1. Clone o repositório para seu ambiente local:
     ```bash
-    git clone https://github.com/seu-usuario/youtube-mp3-downloader-trimmer.git
+    git clone https://github.com/fraconca/ytdl-audio-trimmer.git
     ```
 
 2. Acesse a pasta do projeto:
