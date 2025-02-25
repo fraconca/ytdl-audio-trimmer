@@ -30,7 +30,7 @@ const videoUrl = urlFlagIndex !== -1 ? args[urlFlagIndex + 1] : null;
 if (!startTime || !endTime || !videoUrl) {
     console.log("🛑 Argumentos inválidos! 🛑");
     console.log("📌 Uso correto:");
-    console.log("node index.js --start HH:MM:SS --end HH:MM:SS --url <URL do YouTube>");
+    console.log("node ytdownload --start HH:MM:SS --end HH:MM:SS --url <URL do YouTube>");
     process.exit(1);
 }
 

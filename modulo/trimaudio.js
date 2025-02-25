@@ -36,15 +36,4 @@ if (require.main === module) {
     trimAudio(inputFile, parseFloat(startTime), parseFloat(duration));
 }
 
-//
-// Como uso no terminal:
-// node trimaudio.js <arquivo> <início do corte em segundos> <fim do corte em segundos>
-//
-// Ex 1: 
-// node trimaudio.js audio.mp3 10 30
-//
-// Ex 2:
-// node trimaudio.js audio_20250223061334_9468.mp3 3180 6236
-//
-
 module.exports = trimAudio;

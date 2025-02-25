@@ -54,21 +54,19 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
     ```bash
     ffmpeg -version
     ```
-    Caso não tenha o FFmpeg instalado, siga as instruções no link acima.
+> Caso não tenha o FFmpeg instalado, siga as instruções no link acima.
 
 ---
 
 ## O que cada script faz?
 
-1. index.js baixa um arquivo de áudio de uma URL do YouTube e salva com o nome de audio.mp3.
+1. Baixa um arquivo completo de áudio de uma URL do YouTube.
 
-2. index_2.js faz a mesma coisa que index.js com menos código. Preferi não efetuar um commit no arquivo anterior para poder ter um comparativo da evolução do código que reduziu de 37 para 27 linhas de código.
+2. Através da função generateFilename() o script gera um nome único do arquivo usando Date, TimeStamp e converte a data como string no formato ISO. Remove caracteres especiais, mantém apenas ANO, MÊS, DIA, HORA, MINUTO, SEGUNDO e adiciona um número aleatório de 4 dígitos. Nomeia o arquivo "audio_${timestamp}_${randomNum}.mp3" e salva na pasta onde o script foi executado.
 
-3. index_3.js implementa a função generateFilename() para gerar um nome único do arquivo usando Date, timestamp e converte a data como string no formato ISO. Depois Remove caracteres especiais, mantendo apenas ANO, MÊS, DIA, HORA, MINUTO, SEGUNDO e adiciona um número aleatório de 4 dígitos, criando o formato final do arquivo "audio_${timestamp}_${randomNum}.mp3" e salvando na pasta onde o script foi executado.
+3. Usa a função ffmpeg() e no método .on define um início e fim do corte na função "trimAudio()" contado o tempo total em segundos e cria um novo arquivo editado com o corte de tempo estipulado e adiciona no final do arquivo a expresssão "_trimmed" para identificar o áudio cortado.
 
-4. index_4_trimmer.js usa a função ffmpeg() e no método .on define um início e fim do corte diretamente em "trimAudio()" contado em segundos.
-
-5. index_5_trimmer.js amplia a função ffmpeg() ao converter os tempos em HH:MM:SS para segundos e cria uma nova função convertToSeconds() para poder editar a entrada no formato HH:MM:SS como é encontrado no formato de registro de tempo dos vídeos do YouTube.
+4. No final a execução, você terá dois arquivos: um original completo e outro cortado. 
 
 ---
 
@@ -76,48 +74,36 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 ### Baixar Áudio e Cortar
 
-1. **Baixar o áudio** e cortar de forma automática (conversão e corte ao mesmo tempo):
-
-    Para iniciar o processo de download e corte, basta executar o script principal `index.js`:
+Para iniciar o processo de download e corte de áudio, utilize o seguinte comando:
 
     ```bash
-    node index.js
+    node ytdownload --start 00:00:45 --end 00:27:24 --url "https://www.youtube.com/watch?v=3q3U9HpPHmY"
     ```
 
-    O script pedirá a URL do vídeo do YouTube e, em seguida, realizará o download e corte automaticamente com os parâmetros de tempo predefinidos.
+O script precisa receber argumentos corretos através de 3 flags para poder realizar o download e o corte automaticamente.
+    
+- --start define o tempo inicial do corte no formato HH:MM:SS. Se o corte dor aos 3 segundos, informe todos os zeros "00:00:03" para que a função converta corretamente o tempo informado em segundos.
 
-### Corte Manual de Áudio
+- --end define o tempo final do corte no mesmo formato HH:MM:SS.
 
-Se você preferir cortar um arquivo MP3 já baixado manualmente, use o arquivo `trimaudio.js`. Aqui está um exemplo de como rodá-lo diretamente:
+- --URL define a URL do vídeo do YouTube a ser baixado.
 
-```bash
-node trimaudio.js <arquivo-audio> <hora-inicio> <hora-fim>
-```
+> IMPORTANTE: Certifique-se de colocar a URL entre aspas (" ") para evitar erros no terminal. 
 
 ---
 
 ## 🔧 Contribuições
 
-Contribuições são bem-vindas! Se você encontrou um bug ou tem uma ideia para melhorar o projeto, sinta-se à vontade para abrir uma issue ou pull request.
+Contribuições são bem-vindas!
 
-Para contribuir:
+Se você encontrou um bug ou tem uma ideia para melhorar o projeto, sinta-se à vontade para abrir uma issue ou pull request.
 
-1. Faça um fork deste repositório.
+### ♥️ Esse código te ajudou?
 
-2. Crie uma branch para a sua funcionalidade ou correção de bug:
+**Me adicione no Linkedin** ou me pague um café via PIX (te passo a chave no Inbox)!
+https://br.linkedin.com/in/flavio-conca
 
-```bash
-git checkout -b minha-funcionalidade
-```
-
-3. Faça suas alterações e envie-as:
-
-```bash
-git commit -m "Adicionando nova funcionalidade"
-git push origin minha-funcionalidade
-```
-
-4. Abra uma pull request.
+**Me siga no Twitter** também: [@fraconca](https://x.com/FraConca)
 
 ---
 
