@@ -72,7 +72,7 @@ Este projeto foi desenvolvido com a biblioteca [ytdl-core](https://github.com/fe
 
 ## 📝 Como Usar
 
-### Baixar Áudio e Cortar
+### Baixar áudio e cortar
 
 Para iniciar o processo de download e corte de áudio, utilize o seguinte comando:
 
@@ -86,9 +86,16 @@ O script precisa receber argumentos corretos através de 3 flags para poder real
 
 - --end define o tempo final do corte no mesmo formato HH:MM:SS.
 
-- --url define a URL do vídeo do YouTube a ser baixado. Detalhe: URL na flag é em minúsculo (url), ok?!
+- --url define a URL do vídeo do YouTube a ser baixado. Detalhe: URL na flag é em minúsculo (url), ok?! 
 
-> IMPORTANTE: Certifique-se de colocar a URL entre aspas (" ") para evitar erros no terminal. 
+> IMPORTANTE: Certifique-se de colocar a URL entre aspas (" ") para evitar erros no terminal.
+
+### Apenas baixar o áudio sem cortar
+
+A única exigência obrigatória é a --url. Se o argumento não for passado, o script avisa que foi baixado sem corte e encerra.
+
+- Se ``--start`` e ``--end`` forem passados, o áudio será cortado.
+- Se ``--start`` e ``--end`` não forem passados, o áudio será baixado normalmente sem cortes.
 
 ---
 

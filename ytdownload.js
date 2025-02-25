@@ -26,18 +26,28 @@ const startTime = startFlagIndex !== -1 ? args[startFlagIndex + 1] : null;
 const endTime = endFlagIndex !== -1 ? args[endFlagIndex + 1] : null;
 const videoUrl = urlFlagIndex !== -1 ? args[urlFlagIndex + 1] : null;
 
-// Verifica se todos os argumentos foram fornecidos
-if (!startTime || !endTime || !videoUrl) {
-    console.log("🛑 Argumentos inválidos! 🛑");
+// Verifica se a URL foi fornecida
+if (!videoUrl) {
+    console.log("🛑 URL do YouTube é obrigatória! 🛑");
     console.log("📌 Uso correto:");
-    console.log("node ytdownload --start HH:MM:SS --end HH:MM:SS --url <URL do YouTube>");
+    console.log("node ytdownload --url <URL do YouTube> [--start HH:MM:SS --end HH:MM:SS]");
     process.exit(1);
 }
 
-// Converte tempos para segundos
-const startSeconds = convertToSeconds(startTime);
-const endSeconds = convertToSeconds(endTime);
-const duration = endSeconds - startSeconds;
+// Verifica se os tempos foram informados corretamente
+const shouldTrim = startTime && endTime;
+let startSeconds, duration;
+
+if (shouldTrim) {
+    startSeconds = convertToSeconds(startTime);
+    const endSeconds = convertToSeconds(endTime);
+    duration = endSeconds - startSeconds;
+
+    if (duration <= 0) {
+        console.log("🛑 O tempo final deve ser maior que o tempo inicial! 🛑");
+        process.exit(1);
+    }
+}
 
 // Função para baixar áudio
 async function downloadMP3(videoUrl) {
@@ -58,9 +68,13 @@ async function downloadMP3(videoUrl) {
             .on("end", async () => {
                 console.log(`✅ Download concluído: ${outputFilename} 🎶`);
 
-                // ⚡ Após o download, corta automaticamente um trecho do áudio
-                const trimmedFile = await trimAudio(outputFilename, startSeconds, duration);
-                console.log(`🎉 Áudio cortado disponível em: ${trimmedFile} 🖖🏻`);
+                // Se os tempos foram fornecidos, realiza o corte
+                if (shouldTrim) {
+                    const trimmedFile = await trimAudio(outputFilename, startSeconds, duration);
+                    console.log(`🎉 Áudio cortado disponível em: ${trimmedFile} 🖖🏻`);
+                } else {
+                    console.log("🎵 O áudio foi baixado sem cortes.");
+                }
 
                 resolve();
             })
